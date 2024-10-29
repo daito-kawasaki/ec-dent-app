@@ -1,3 +1,3 @@
-export default function first(second) {
-    return <p>こんにちは</p>
+export default function Page(second) {
+    return <div></div>
 }
