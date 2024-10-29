@@ -1,3 +1,5 @@
-export default function Page(second) {
-    return <div></div>
+import Header from '../components/common/header'
+
+export default function first(second) {
+    return <Header />
 }
