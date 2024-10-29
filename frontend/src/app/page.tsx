@@ -1,3 +1,5 @@
+import Header from '../components/common/header'
+
 export default function first(second) {
-    return <p>こんにちは</p>
+    return <Header />
 }
