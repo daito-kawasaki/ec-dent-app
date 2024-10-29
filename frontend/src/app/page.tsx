@@ -1,9 +1,5 @@
+import Header from '../components/common/header'
+
 export default function first(second) {
-    return (
-        <>
-            <p>こんにちは</p>
-            <div></div>
-            <div className="">こん</div>
-        </>
-    )
+    return <Header />
 }
