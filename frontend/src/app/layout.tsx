@@ -1,7 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import { notoSansJp } from '@/lib/fonts'
-// import '@/app/global.css'
+import '@/app/global.css'
 
 export const metadata: Metadata = {
     title: {
