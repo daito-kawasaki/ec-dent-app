@@ -1,5 +1,5 @@
-import Header from '../components/common/header'
+import TopPage from '@/components/page/top-page'
 
 export default function first(second) {
-    return <Header />
+    return <TopPage />
 }
