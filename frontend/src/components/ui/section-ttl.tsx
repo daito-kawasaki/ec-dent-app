@@ -4,7 +4,7 @@ interface ttlProps {
     ttl: string
     sub_ttl: string
 }
-export default function SectionTtl({ ttl, sub_ttl }) {
+export default function SectionTitle({ ttl, sub_ttl }) {
     return (
         <div
             id="section_ttl"

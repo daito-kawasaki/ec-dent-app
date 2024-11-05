@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { IMGPATH_BRAND } from '../../lib/common'
-import SectionTtl from '../../components/ui/section-ttl'
+import SectionTitle from '@/components/ui/section-ttl'
 
 export default function Brand() {
     return (
@@ -17,7 +17,7 @@ export default function Brand() {
                 />
             </div>
 
-            <SectionTtl ttl="Catch Copy" sub_ttl="キャッチコピーについて" />
+            <SectionTitle ttl="Catch Copy" sub_ttl="キャッチコピーについて" />
 
             <section
                 id="main_sec"
@@ -64,7 +64,7 @@ export default function Brand() {
                     className=" img_setting"
                 />
             </div>
-            <SectionTtl ttl={'Concept'} sub_ttl={'私達の思い'} />
+            <SectionTitle ttl={'Concept'} sub_ttl={'私達の思い'} />
             <section
                 id="concept_sec"
                 className=" flex justify-between section_setting">
@@ -96,7 +96,7 @@ export default function Brand() {
                     className=" img_setting"
                 />
             </div>
-            <SectionTtl
+            <SectionTitle
                 ttl={'Delegation Message'}
                 sub_ttl={'代表者メッセージ'}
             />
