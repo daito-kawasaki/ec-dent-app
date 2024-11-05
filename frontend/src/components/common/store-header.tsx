@@ -8,7 +8,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
-export default function first() {
+export default function StoreHeader() {
     const list_setting =
         'list-none hover:border-b border-black text-center flex-auto'
     return (
