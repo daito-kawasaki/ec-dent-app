@@ -10,6 +10,7 @@ config.autoAddCss = false
 import Image from 'next/image'
 import { IMGPATH_HEADER } from '@/lib/common'
 import { notoSansBengali } from '@/lib/fonts'
+import { link } from 'fs'
 
 export default function StoreHeader() {
     const categoryList = [
