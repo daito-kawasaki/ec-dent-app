@@ -12,6 +12,13 @@ import { IMGPATH_HEADER } from '@/lib/common'
 import { notoSansBengali } from '@/lib/fonts'
 
 export default function StoreHeader() {
+    const categoryList = [
+        { categories: 'CATEGORY' },
+        { categories: 'CATEGORY' },
+        { categories: 'CATEGORY' },
+        { categories: 'CATEGORY' },
+    ]
+
     const list_setting =
         'list-none hover:border-b border-black text-center flex-auto'
     return (
@@ -72,18 +79,13 @@ export default function StoreHeader() {
                 </div>
             </div>
             <nav className="flex px-[7.32vw] justify-between font-bold">
-                <li className={`${list_setting} ${notoSansBengali}`}>
-                    CATEGORY
-                </li>
-                <li className={`${list_setting} ${notoSansBengali}`}>
-                    CATEGORY
-                </li>
-                <li className={`${list_setting} ${notoSansBengali}`}>
-                    CATEGORY
-                </li>
-                <li className={`${list_setting} ${notoSansBengali}`}>
-                    CATEGORY
-                </li>
+                {categoryList.map((value, index) => (
+                    <li
+                        key={index}
+                        className={`${list_setting} ${notoSansBengali}`}>
+                        {value.categories}
+                    </li>
+                ))}
             </nav>
         </header>
     )
