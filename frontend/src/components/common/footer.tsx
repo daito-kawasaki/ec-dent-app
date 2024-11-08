@@ -110,12 +110,15 @@ export default function Footer() {
         { text: 'ショッピングガイド', herf: '/' },
     ]
     return (
-        <footer className="pt-12 md:pt-20">
+        <footer className="pt-12 md:pt-20 xl:pt-[7.32vw]">
             <div
-                id="footer-top-cnt"
-                className=" items-center py-5 flex-col flex  gap-5 bg-[#5ccea780] md:pl-12 md:items-start md:flex-row md:gap-10 lg:gap-16 lg:items-start">
+                id="footer_top_cnt"
+                className=" items-center py-5 flex-col flex  gap-5 bg-[#5ccea780] 
+                md:pl-12 md:items-start md:flex-row md:gap-10 
+                lg:gap-16 lg:items-start 
+                xl:pl-[5.12445vw] xl:gap-[7.8330vw]">
                 <Link href="">
-                    <div id="ec-dent-logo" className=" w-[100px] h-[92.23px] ">
+                    <div id="ec_dent_logo" className=" w-[100px] h-[92.23px] ">
                         <Image
                             src={`${IMGPATH_FOOTER}footer_logo.svg`}
                             alt="Footer Logo"
@@ -125,23 +128,24 @@ export default function Footer() {
                     </div>
                 </Link>
                 <nav
-                    id="footer-block"
-                    className=" flex-col flex gap-5 px-5 text-center w-fit md:flex-row lg:gap-10">
+                    id="footer_block"
+                    className=" flex-col flex gap-5 px-5 text-center md:flex-row md:px-0 lg:gap-10 xl:gap-[3.80vw] ">
                     <div
-                        id="left-items"
-                        className=" flex gap-2 justify-center  md:flex-col md:text-left">
+                        id="left_items"
+                        className=" flex gap-2 justify-center  md:flex-col md:text-left xl:flex xl:gap-0">
                         {leftItems.map((item: LeftItems) => (
                             <Link
                                 key={item.text}
                                 href={item.href}
-                                className={`${playfairDisplay.className} text-lg`}>
+                                className={`${playfairDisplay.className} text-lg xl:text-xl`}>
                                 {item.text}
                             </Link>
                         ))}
                     </div>
                     <div
-                        id="right-items"
-                        className=" flex flex-wrap gap-2 justify-center md:flex-col md:text-left md:justify-start">
+                        id="right_items"
+                        className=" flex flex-wrap gap-2 justify-center 
+                        md:flex-col md:text-left md:justify-start xl:gap-[0.732vw]">
                         {rightItems.map((item: RightItems) => (
                             <Link
                                 key={item.text}
@@ -153,10 +157,12 @@ export default function Footer() {
                     </div>
                 </nav>
             </div>
-            <div id="footer-bottom-cnt" className="py-3 pl-5 bg-[#ced4da4d]">
+            <div
+                id="footer_bottom_cnt"
+                className="py-3 pl-5 bg-[#ced4da4d] md:pl-0 xl:py-5 ">
                 <div
-                    id="span-block"
-                    className=" flex gap-1 text-xs md:w-fit md:mx-auto">
+                    id="span_block"
+                    className=" flex gap-1 text-xs md:w-fit md:mx-auto xl:text-xl">
                     <span className={`${playfairDisplay.className}`}>©</span>
                     <span className={`${poppins.className}`}>2024</span>
                     <span className={`${playfairDisplay.className}`}>
