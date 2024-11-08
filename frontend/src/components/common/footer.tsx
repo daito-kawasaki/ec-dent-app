@@ -1,18 +1,33 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { IMGPATH_FOOTER } from '@/lib/common'
-import { playfairDisplay } from '@/lib/fonts'
+import { playfairDisplay, poppins } from '@/lib/fonts'
 
 export default function Footer() {
-    const left_list_setting = 'font-normal font-'
-    const right_list_setting = ''
-    const leftSetting: string[] = [
-        'TOP',
-        'STORE',
-        'NEWS',
-        'CONTACT',
-        'LOGIN',
-        'CART',
+    const left_items_font = 'text-base'
+
+    type LeftItems = {
+        text: string
+        href: string
+    }
+    type RightItems = {
+        text: string
+        herf: string
+    }
+    const leftItems: LeftItems[] = [
+        { text: 'TOP', href: '/' },
+        { text: 'STORE', href: '/store' },
+        { text: 'NEWS', href: '/news' },
+        { text: 'CONTACT', href: '/contact' },
+        { text: 'LOGIN', href: '/login' },
+        { text: 'CART', href: '/cart' },
+    ]
+
+    const rightItems: RightItems[] = [
+        { text: '利用規約', herf: '/' },
+        { text: 'プライバシーポリシー', herf: '/' },
+        { text: '特定商取引に関する法律', herf: '/' },
+        { text: 'ショッピングガイド', herf: '/' },
     ]
 
     return (
@@ -33,51 +48,37 @@ export default function Footer() {
                 <nav id="footer-block" className="flex gap-[3.80vw]">
                     <div
                         id="left-items"
-                        className="list-none flex-col flex gap-[0.732vw]">
-                        <Link
-                            href=""
-                            className={`${playfairDisplay.className}`}>
-                            TOP
-                        </Link>
-                        <Link href="" className=" ">
-                            STORE
-                        </Link>
-                        <Link href="" className="">
-                            NEWS
-                        </Link>
-                        <Link href="" className="">
-                            CONTACT
-                        </Link>
-                        <Link href="" className="">
-                            LOGIN
-                        </Link>
-                        <Link href="" className="">
-                            CART
-                        </Link>
+                        className="flex-col flex gap-[0.732vw]">
+                        {leftItems.map((item: LeftItems) => (
+                            <Link
+                                key={item.text}
+                                href={item.href}
+                                className={`${playfairDisplay} text-xl`}>
+                                {item.text}
+                            </Link>
+                        ))}
                     </div>
                     <div
                         id="right-items"
-                        className="list-none flex-col flex gap-[0.732vw]">
-                        <Link href="" className="">
-                            利用規約
-                        </Link>
-                        <Link href="" className="">
-                            プライバシーポリシー
-                        </Link>
-                        <Link href="" className="">
-                            特定商取引に関する法律
-                        </Link>
-                        <Link href="" className="">
-                            ショッピングガイド
-                        </Link>
+                        className="flex-col flex gap-[0.732vw] ">
+                        {rightItems.map((item: RightItems) => (
+                            <Link
+                                key={item.text}
+                                href={item.herf}
+                                className={`text-base`}>
+                                {item.text}
+                            </Link>
+                        ))}
                     </div>
                 </nav>
             </div>
             <div id="footer-bottom-cnt" className="py-5 bg-[#ced4da4d]">
-                <div id="footer-bottom-block" className="flex list-none ">
-                    <span>©</span>
-                    <span>2024</span>
-                    <span>CIEL Inc.</span>
+                <div id="span-block" className=" w-fit mx-auto text-xl">
+                    <span className={`${playfairDisplay.className}`}>©</span>
+                    <span className={`${poppins.className}`}>2024</span>
+                    <span className={`${playfairDisplay.className}`}>
+                        CIEL Inc.
+                    </span>
                 </div>
             </div>
         </footer>
