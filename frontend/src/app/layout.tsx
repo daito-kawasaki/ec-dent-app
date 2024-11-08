@@ -18,7 +18,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ja">
-            <body className={notoSansJp.className}>{children}</body>
+            <body className={`${notoSansJp.className} text-base`}>
+                {children}
+            </body>
         </html>
     )
 }
