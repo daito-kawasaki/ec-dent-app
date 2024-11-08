@@ -1,9 +1,24 @@
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
+
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-    content: ['./src/**/*.{js,jsx,ts,tsx}'],
-    theme: {},
+    content: {
+        files: ['./src/**/*.{js,jsx,ts,tsx}'],
+        extract,
+    },
+    theme: {
+        screens,
+        screens: {
+            sp: '360px',
+            md: '768px',
+            lg: '1024px',
+            xl: '1366px',
+        },
+        fontSize,
+    },
     plugins: [
+        fluid,
         require('@tailwindcss/forms'),
         plugin(function ({ addComponents }) {
             addComponents({
