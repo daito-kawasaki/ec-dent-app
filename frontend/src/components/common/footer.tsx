@@ -113,7 +113,7 @@ export default function Footer() {
         <footer className="pt-12 md:pt-20">
             <div
                 id="footer-top-cnt"
-                className=" items-center py-5 flex-col flex  gap-5 bg-[#5ccea780] md:flex-row md:gap-10">
+                className=" items-center py-5 flex-col flex  gap-5 bg-[#5ccea780] md:pl-12 md:items-start md:flex-row md:gap-10 lg:gap-16 lg:items-start">
                 <Link href="">
                     <div id="ec-dent-logo" className=" w-[100px] h-[92.23px] ">
                         <Image
@@ -126,7 +126,7 @@ export default function Footer() {
                 </Link>
                 <nav
                     id="footer-block"
-                    className=" flex-col flex gap-5 px-5 text-center w-fit md:flex-row">
+                    className=" flex-col flex gap-5 px-5 text-center w-fit md:flex-row lg:gap-10">
                     <div
                         id="left-items"
                         className=" flex gap-2 justify-center  md:flex-col md:text-left">
