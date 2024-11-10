@@ -28,6 +28,7 @@ module.exports = {
         fluid,
         require('tailwindcss-fluid-spacing'),
         require('@tailwindcss/forms'),
+        require('tailwindcss-fluid-spacing'),
         plugin(function ({ addComponents }) {
             addComponents({
                 '.img_setting': {
