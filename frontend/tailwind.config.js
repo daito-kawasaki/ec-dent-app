@@ -11,6 +11,7 @@ module.exports = {
         screens,
         screens: {
             sp: '360px',
+            sm: '480px',
             md: '768px',
             lg: '1024px',
             xl: '1366px',
@@ -20,6 +21,7 @@ module.exports = {
     plugins: [
         fluid,
         require('@tailwindcss/forms'),
+        require('tailwindcss-fluid-spacing'),
         plugin(function ({ addComponents }) {
             addComponents({
                 '.img_setting': {

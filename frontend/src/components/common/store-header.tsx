@@ -42,7 +42,9 @@ export default function StoreHeader() {
                 <div
                     id="top_cnt"
                     className=" flex items-center px-5 justify-between">
-                    <div id="icon_block" className="flex gap-4 items-center">
+                    <div
+                        id="icon_block"
+                        className="hidden gap-4 items-center sm:flex">
                         {iconList.map((value, index) => (
                             <Link href={value.link} key={index}>
                                 <FontAwesomeIcon
@@ -56,7 +58,7 @@ export default function StoreHeader() {
                     <Link href="/">
                         <div
                             id="ec-dent-logo"
-                            className=" w-[37.5vw] h-auto max-[300px]:">
+                            className=" h-auto  w-[53.125vw] sm:w-[41.6vw] md:w-[36.4583vw]">
                             <Image
                                 src={`${IMGPATH_HEADER}ec-dent-logo.svg`}
                                 alt=""
@@ -102,7 +104,8 @@ export default function StoreHeader() {
                 </nav>
             </header>
 
-            <header className="flex-col gap-5 lg:flex sp:hidden">
+            {/* 768pxからのヘッダー */}
+            <header className="flex-col gap-5 lg:flex hidden">
                 <div
                     id="head-top-cnt"
                     className="flex justify-between px-[7.32vw]">
