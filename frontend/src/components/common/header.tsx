@@ -1,4 +1,4 @@
-'use Client'
+'use client'
 
 import { IMGPATH_BRAND, IMGPATH_HEADER } from '@/lib/common'
 import { notoSansBengali } from '@/lib/fonts'
@@ -9,7 +9,7 @@ import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
 import { poppins } from '@/lib/fonts'
 
 export default function Header() {
-    const textClass = `text-xs bold flex items-center hidden lg:block  ${notoSansBengali.className}` //テキスト用のクラス
+    const textClass = `text-xs bold flex items-center ${notoSansBengali.className}` //テキスト用のクラス
     const imageClass = 'w-32 h-auto ' //画像用のクラス
 
     type HeaderText = {
@@ -28,12 +28,12 @@ export default function Header() {
 
     return (
         <header>
-            <nav className="flex justify-between px-4 lg:px-[7.32vw]">
+            <nav className="flex items-center justify-between px-4 lg:px-[7.32vw]">
                 {headerText.map((value, index) => (
                     <Link
                         href={value.href}
                         key={index}
-                        className="flex items-center">
+                        className={value.text && ' hidden lg:block'}>
                         {value.text && (
                             <span className={textClass}>{value.text}</span>
                         )}
