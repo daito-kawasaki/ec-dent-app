@@ -1,4 +1,4 @@
-import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
+import fluid, { extract, fluidScreens, fontSize } from 'fluid-tailwind'
 
 const plugin = require('tailwindcss/plugin')
 
@@ -8,18 +8,25 @@ module.exports = {
         extract,
     },
     theme: {
-        screens,
+        extend: {
+            spacing: {
+                75: '18.75rem',
+                24.5: '6.25rem',
+                500: '31.25rem',
+            },
+        },
         screens: {
-            sp: '360px',
-            sm: '480px',
-            md: '768px',
-            lg: '1024px',
-            xl: '1366px',
+            sp: '22.5rem',
+            sm: '30rem',
+            md: '48rem',
+            lg: '64rem',
+            xl: '85.375rem',
         },
         fontSize,
     },
     plugins: [
         fluid,
+        require('tailwindcss-fluid-spacing'),
         require('@tailwindcss/forms'),
         require('tailwindcss-fluid-spacing'),
         plugin(function ({ addComponents }) {

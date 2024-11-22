@@ -9,9 +9,8 @@ import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
 import { poppins } from '@/lib/fonts'
 
 export default function Header() {
-    const textClass = `text-xs bold font-bold flex items-center ${notoSansBengali.className}` //テキスト用のクラス
-    const imageClass =
-        'w-32 h-auto sm:w-40 sm:w-[150px] md:w-[230px] lg:w-[300px]' //画像用のクラス
+    const textClass = `text-xs bold font-bold flex items-center ${notoSansBengali.className} lg:~lg/xl:~text-sm/base xl:~text-base/xl min-[112.5rem]:text-2xl` //テキスト用のクラス
+    const imageClass = '~sp/lg:~w-32/75 h-auto' //画像用のクラス
 
     type HeaderText = {
         text?: string
@@ -29,7 +28,7 @@ export default function Header() {
 
     return (
         <header>
-            <nav className="flex items-center justify-between px-4 sm:px-7 md:px-10 lg:px-[7.32vw]">
+            <nav className="flex items-center justify-between  ~sp/md:~px-4/10 md:~px-10/14">
                 {headerText.map((value, index) => (
                     <Link
                         href={value.href}
@@ -51,29 +50,27 @@ export default function Header() {
                 ))}
                 <div
                     id="right"
-                    className="flex gap-x-2.5 items-center md:gap-x-4 lg:hidden">
+                    className="flex gap-x-2.5 items-center ~sp/md:~gap-5/8  lg:hidden">
                     <div
                         id="mail_icon"
-                        className="flex border border-black opacity-70 rounded-full px-[10px] py-[5px] gap-[10px] items-center 
-                        sm:px-[15px] sm:py-[10px] sm:gap-[15px] 
-                        md:px-[17px] md:py-[10px] md:gap-[17x]">
+                        className="flex border border-black opacity-70 rounded-full ~sp/lg:~px-2.5/6 ~/sm:~py-1.5/2 ~sp/lg:~gap-2.5/6 items-center">
                         <FontAwesomeIcon
-                            className="md:text-lg"
+                            className=" ~/sm:~text-xs/sm sm:~sm/lg:~text-sm/2xl"
                             icon={faPaperPlane}
                             size="xs"
                             color="#212121cc"
                         />
                         <span
-                            className={`${poppins.className} text-xs font-medium opacity-70 sm:text-base md:text-lg`}>
+                            className={`${poppins.className} font-medium opacity-70 ~sp/lg:~text-xs/2xl `}>
                             CONTACT
                         </span>
                     </div>
                     <div
                         id="hamburger"
-                        className="w-[40px] h-[40px] flex flex-col gap-1 justify-center items-center border border-black rounded-[50%] md:w-[50px] md:h-[50px]">
-                        <span className="block w-5 h-[2px] scale-y-50 bg-black md:w-6"></span>
-                        <span className="block w-5 h-[2px] scale-y-50 bg-black md:w-6"></span>
-                        <span className="block w-5 h-[2px] scale-y-50 bg-black md:w-6"></span>
+                        className="~/sm:~w-7/10 ~/sm:~h-7/10 flex flex-col ~/md:~gap-0.5/1.5 justify-center items-center border border-black rounded-[50%]  sm:~sm/lg:~w-10/12  sm:~sm/lg:~h-10/12  md:w-vw-20 md:h-vw-20">
+                        <span className="block w-vw-14 h-[2px] scale-y-50 bg-black md:w-vw-10"></span>
+                        <span className="block w-vw-14 h-[2px] scale-y-50 bg-black md:w-vw-10"></span>
+                        <span className="block w-vw-14 h-[2px] scale-y-50 bg-black md:w-vw-10"></span>
                     </div>
                 </div>
             </nav>
