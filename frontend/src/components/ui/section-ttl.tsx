@@ -8,9 +8,13 @@ export default function SectionTitle({ ttl, sub_ttl }) {
     return (
         <div
             id="section_ttl"
-            className=" w-fit pt-[1.464vw] pl-12 pr-24 border-b border-black">
-            <span className=" block text-black opacity-70 pb-[5px]">{ttl}</span>
-            <span className=" block pb-[0.732vw] text-2xl">{sub_ttl}</span>
+            className=" w-fit pt-10 pl-7.5 pr-9 border-b border-black lg:~lg/xl:~pt-14/20 md:~md/xl:~pr-9/24.5">
+            <span className=" ~/md:~text-xs/sm block text-black opacity-70 xl:text-base">
+                {ttl}
+            </span>
+            <span className=" block pb-2 ~/md:~text-lg/xl lg:~lg/xl:~text-xl/2xl">
+                {sub_ttl}
+            </span>
         </div>
     )
 }
