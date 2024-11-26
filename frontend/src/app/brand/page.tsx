@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { IMGPATH_BRAND } from '../../lib/common'
 import SectionTitle from '@/components/ui/section-ttl'
 import StoreHeader from '@/components/common/store-header'
+import { dmSerifDisplay, shipporiMincho } from '@/lib/fonts'
+import { Shippori_Mincho } from 'next/font/google'
 
 export default function Brand() {
     return (
@@ -25,9 +27,45 @@ export default function Brand() {
                     sub_ttl="キャッチコピーについて"
                 />
 
+                <section id="main_sec" className=" block mt-32 ">
+                    <div
+                        id="main_left_cnt"
+                        className="flex flex-col justify-center">
+                        <div
+                            id="main_ttl"
+                            className=" w-60 h-auto relative mb-3 ml-auto">
+                            <Image
+                                src={`${IMGPATH_BRAND}possible_back.png`}
+                                alt=""
+                                width={326}
+                                height={123}
+                            />
+                            <span className=" font-bold text-3.5xl absolute-center text-nowrap text-white">
+                                I Mpossible
+                            </span>
+                        </div>
+                        <span
+                            className={` text-2xl ${dmSerifDisplay.className}`}>
+                            Impossible
+                        </span>
+                        <p
+                            className={` w-[36.6vw] ${shipporiMincho.className}`}>
+                            という単語は不可能という意味ですが、「I」と「M」の間にスペースを入れてみてください。I'mpossibleとも読めませんか？この文は、「私は可能だ」という意味です。学生というのは才能の原石です。この原石は不可能を可能にする可能性を多く秘めています。この原石を私達のサービスで研磨することで、この社会で不可能だったこともを可能にしてくれる人材を磨き上げて行くという意味を込めています。
+                        </p>
+                    </div>
+                    <div id="main_right_cnt" className="w-[46.12vw] ">
+                        <Image
+                            src={`${IMGPATH_BRAND}catch_copy.png`}
+                            alt=""
+                            width={630}
+                            height={426}
+                            className=" img_setting"
+                        />
+                    </div>
+                </section>
                 <section
                     id="main_sec"
-                    className="flex justify-between section_setting">
+                    className=" flex items-center justify-between ">
                     <div
                         id="main_left_cnt"
                         className="flex flex-col justify-center">
@@ -59,6 +97,7 @@ export default function Brand() {
                         />
                     </div>
                 </section>
+
                 <div
                     id="section_img"
                     className=" w-[39vw] h-auto ml-auto mr-[12.445vw] my-5">
