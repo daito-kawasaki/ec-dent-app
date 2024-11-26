@@ -35,7 +35,7 @@ export default function Brand() {
                         className=" md:flex md:flex-col md:items-center">
                         <div
                             id="main_ttl"
-                            className=" w-60 h-auto relative mb-3 ml-auto md:ml-0 md:~md/xl:~w-235/340 md:mb-0 lg:w-280 xl:w-340">
+                            className=" w-[23.8653vw] h-auto relative mb-3 mx-auto">
                             <Image
                                 src={`${IMGPATH_BRAND}possible_back.png`}
                                 alt=""
@@ -43,22 +43,14 @@ export default function Brand() {
                                 height={123}
                                 className=" img_setting"
                             />
-                            <span className=" font-bold text-3.5xl absolute-center text-nowrap text-white md:~md/xl:~text-3xl/44 lg:text-4xl xl:text-44">
+                            <span className=" font-bold text-5xl absolute-center text-nowrap text-white">
                                 I Mpossible
                             </span>
                         </div>
-                        <div
-                            id="main_text_block"
-                            className="mt-5 mb-14.5 mx-7.5 md:mx-0">
-                            <span
-                                className={` text-2xl ${dmSerifDisplay.className} block mb-7.5 md:mb-2.5`}>
-                                Impossible
-                            </span>
-                            <p
-                                className={`${shipporiMincho.className} md:~md/xl:~text-sm/lg`}>
-                                という単語は不可能という意味ですが、「I」と「M」の間にスペースを入れてみてください。I'mpossibleとも読めませんか？この文は、「私は可能だ」という意味です。学生というのは才能の原石です。この原石は不可能を可能にする可能性を多く秘めています。この原石を私達のサービスで研磨することで、この社会で不可能だったこともを可能にしてくれる人材を磨き上げて行くという意味を込めています。
-                            </p>
-                        </div>
+                        <span className=" text-2xl">Impossible</span>
+                        <p className=" w-[36.6vw]">
+                            という単語は不可能という意味ですが、「I」と「M」の間にスペースを入れてみてください。I'mpossibleとも読めませんか？この文は、「私は可能だ」という意味です。学生というのは才能の原石です。この原石は不可能を可能にする可能性を多く秘めています。この原石を私達のサービスで研磨することで、この社会で不可能だったこともを可能にしてくれる人材を磨き上げて行くという意味を込めています。
+                        </p>
                     </div>
                     <div
                         id="main_right_cnt"

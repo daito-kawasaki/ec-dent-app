@@ -41,6 +41,9 @@ module.exports = {
                 secLine_lg: '33rem', //528px
                 secLine_xl: '33.375rem', //534px
             },
+            fontSize: {
+                '3.5xl': '2.0625rem',
+            },
             width: {
                 32.5: '8.5rem',
                 38: '9.375rem',
