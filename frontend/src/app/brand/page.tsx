@@ -5,7 +5,7 @@ import { IMGPATH_BRAND } from '../../lib/common'
 import SectionTitle from '@/components/ui/section-ttl'
 import StoreHeader from '@/components/common/store-header'
 import { dmSerifDisplay, shipporiMincho } from '@/lib/fonts'
-import { Shippori_Mincho } from 'next/font/google'
+import Footer from '@/components/common/footer'
 
 export default function Brand() {
     return (
@@ -27,10 +27,8 @@ export default function Brand() {
                     sub_ttl="キャッチコピーについて"
                 />
 
-                <section id="main_sec" className=" block mt-32 ">
-                    <div
-                        id="main_left_cnt"
-                        className="flex flex-col justify-center">
+                <section id="main_sec" className=" block mt-32 pb-7.5">
+                    <div id="main_left_cnt" className="">
                         <div
                             id="main_ttl"
                             className=" w-60 h-auto relative mb-3 ml-auto">
@@ -44,16 +42,17 @@ export default function Brand() {
                                 I Mpossible
                             </span>
                         </div>
-                        <span
-                            className={` text-2xl ${dmSerifDisplay.className}`}>
-                            Impossible
-                        </span>
-                        <p
-                            className={` w-[36.6vw] ${shipporiMincho.className}`}>
-                            という単語は不可能という意味ですが、「I」と「M」の間にスペースを入れてみてください。I'mpossibleとも読めませんか？この文は、「私は可能だ」という意味です。学生というのは才能の原石です。この原石は不可能を可能にする可能性を多く秘めています。この原石を私達のサービスで研磨することで、この社会で不可能だったこともを可能にしてくれる人材を磨き上げて行くという意味を込めています。
-                        </p>
+                        <div id="main_text_block" className="mt-5 mb-14.5">
+                            <span
+                                className={` text-2xl ${dmSerifDisplay.className} block mb-7.5`}>
+                                Impossible
+                            </span>
+                            <p className={`${shipporiMincho.className}`}>
+                                という単語は不可能という意味ですが、「I」と「M」の間にスペースを入れてみてください。I'mpossibleとも読めませんか？この文は、「私は可能だ」という意味です。学生というのは才能の原石です。この原石は不可能を可能にする可能性を多く秘めています。この原石を私達のサービスで研磨することで、この社会で不可能だったこともを可能にしてくれる人材を磨き上げて行くという意味を込めています。
+                            </p>
+                        </div>
                     </div>
-                    <div id="main_right_cnt" className="w-[46.12vw] ">
+                    <div id="main_right_cnt" className="w-250 ml-auto">
                         <Image
                             src={`${IMGPATH_BRAND}catch_copy.png`}
                             alt=""
@@ -63,7 +62,8 @@ export default function Brand() {
                         />
                     </div>
                 </section>
-                <section
+
+                {/* <section
                     id="main_sec"
                     className=" flex items-center justify-between ">
                     <div
@@ -96,11 +96,11 @@ export default function Brand() {
                             className=" img_setting"
                         />
                     </div>
-                </section>
+                </section> */}
 
                 <div
                     id="section_img"
-                    className=" w-[39vw] h-auto ml-auto mr-[12.445vw] my-5">
+                    className=" w-full h-auto mr-auto -ml-40  my-5">
                     <Image
                         src={`${IMGPATH_BRAND}path.png`}
                         alt=""
@@ -112,29 +112,35 @@ export default function Brand() {
                 <SectionTitle ttl={'Concept'} sub_ttl={'私達の思い'} />
                 <section
                     id="concept_sec"
-                    className=" flex justify-between section_setting">
-                    <div id="concept_left" className=" w-[46.12vw] h-auto">
+                    className=" block section_setting pt-10 pb-28">
+                    <div id="concept_left" className=" w-full h-auto">
                         <Image
                             src={`${IMGPATH_BRAND}concept.png`}
                             alt=""
                             width={630}
                             height={478}
-                            className=" img_setting"
+                            className=" img_setting hidden md:block"
+                        />
+                        <Image
+                            src={`${IMGPATH_BRAND}concept-sp.png`}
+                            alt=""
+                            width={360}
+                            height={320}
+                            className=" img_setting md:hidden"
                         />
                     </div>
-                    <div
-                        id="concept_right"
-                        className=" w-[36.6vw] flex-col-center">
-                        <p className=" pb-[1.464vw]">
+                    <div id="concept_right" className=" flex-col-center">
+                        <p
+                            className={` mt-50 pb-5 ${shipporiMincho.className}`}>
                             学生が知識をつけ、作成した作品を売り、それを購入した学生がその作品から知識や技術をつけそれ以上のものを作り今度は売り手側に回る。この好循環を私達は目指しこのサービスを広げていきたいと考えています。また、購入者が一般の方だったとしても自身の作品に対してフィードバックが得られる環境作りに対しても注力していきます。
                         </p>
-                        <p className="">
+                        <p className={`${shipporiMincho.className} `}>
                             この現代社会で学生が輝ける場所が少なすぎると考えています。その中で、学生の知識と技術を発信できる場所を作らなければならないという考えのもとこのサービスを立ち上げるに至りました。作品を作って実際に売ることができそれを購入した人からフィードバックが返ってくる機会は多くないのです。だからこそこのサービスが学生達の知識貯蔵庫になれることを目指しています。
                         </p>
                     </div>
                 </section>
 
-                <div className=" w-[39vw] h-auto mr-auto  my-5">
+                <div className=" w-full h-auto ml-auto -mr-140 rotate-[25deg] my-5">
                     <Image
                         src={`${IMGPATH_BRAND}path.png`}
                         alt=""
@@ -147,19 +153,15 @@ export default function Brand() {
                     ttl={'Delegation Message'}
                     sub_ttl={'代表者メッセージ'}
                 />
-                <section
-                    id="message_sec"
-                    className=" flex justify-between section_setting">
-                    <div
-                        id="message_left"
-                        className=" w-[36.6vw] flex-col-center">
-                        <p>
+                <section id="message_sec" className=" section_setting">
+                    <div id="message_left" className="">
+                        <p className={`py-5 mt-6 ${shipporiMincho.className}`}>
                             自分自身学生という狭い環境の中で実践的な学びを得られたのは個人的な実務経験があったからだと
                             感じています。ですが、学生に仕事が回ってくることはめったに無いと思います。
                             その機会を我々が与えることができ、社会全体の技術力が上がる存在になることが我々の目標です。
                         </p>
                     </div>
-                    <div id="message_right" className=" w-[46.12vw] h-auto">
+                    <div id="message_right" className=" w-full h-auto">
                         <Image
                             src={`${IMGPATH_BRAND}message.png`}
                             alt=""
@@ -170,6 +172,7 @@ export default function Brand() {
                     </div>
                 </section>
             </main>
+            <Footer />
         </>
     )
 }
