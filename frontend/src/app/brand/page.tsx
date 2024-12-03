@@ -152,7 +152,7 @@ export default function Brand() {
                     </div>
                 </section>
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }
