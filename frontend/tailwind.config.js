@@ -49,10 +49,18 @@ module.exports = {
                 32.5: '8.5rem',
                 40.5: '10.625rem',
                 53: '13.75rem',
+                235: '14.6875rem',
                 250: '15.625rem',
+                280: '17.5rem',
                 340: '21.25rem',
                 520: '32.5rem',
                 390: '24.375rem',
+
+                secLine_sp: '18.5rem', //296px
+                secLine_sm: '28rem', //448px
+                secLine_md: '33rem', //528px
+                secLine_lg: '33rem', //528px
+                secLine_xl: '33.375rem', //534px
             },
             width: {
                 32.5: '8.5rem',
