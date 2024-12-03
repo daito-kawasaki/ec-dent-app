@@ -5,6 +5,7 @@ import {
     Noto_Sans_JP,
     Playfair_Display,
     Poppins,
+    Shippori_Mincho,
 } from 'next/font/google'
 
 export const dmSerifDisplay = DM_Serif_Display({
@@ -30,6 +31,10 @@ export const playfairDisplay = Playfair_Display({
 })
 
 export const poppins = Poppins({
+    weight: '400',
+    subsets: ['latin'],
+})
+export const shipporiMincho = Shippori_Mincho({
     weight: '400',
     subsets: ['latin'],
 })
