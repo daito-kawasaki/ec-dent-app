@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { IMGPATH_BRAND } from '../../lib/common'
+import { IMGPATH_BRAND } from '@/lib/common'
 import SectionTitle from '@/components/ui/section-ttl'
 import StoreHeader from '@/components/common/store-header'
 import { dmSerifDisplay, shipporiMincho } from '@/lib/fonts'
@@ -160,7 +160,7 @@ export default function Brand() {
                     </div>
                 </section>
             </main>
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

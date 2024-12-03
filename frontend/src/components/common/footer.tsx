@@ -32,7 +32,7 @@ export default function Footer() {
             <div
                 id="footer_top_cnt"
                 className=" items-center py-5 flex-col flex  gap-5 bg-[#5ccea780] 
-                md:pl-12 md:items-start md:flex-row md:gap-10 
+                md:pl-12 md:items-start md:flex-row md:gap-14.5
                 lg:gap-16 lg:items-start 
                 xl:pl-[5.12445vw] xl:gap-[7.8330vw]">
                 <Link href="">
@@ -47,10 +47,10 @@ export default function Footer() {
                 </Link>
                 <nav
                     id="footer_block"
-                    className=" flex-col flex gap-5 px-5 text-center md:flex-row md:px-0 lg:gap-10 xl:gap-[3.80vw] ">
+                    className=" flex-col flex gap-5 px-5 text-center md:flex-row md:px-0 md:gap-14.5 lg:gap-10 xl:gap-[3.80vw] ">
                     <div
                         id="left_items"
-                        className=" flex gap-2 justify-center  md:flex-col md:text-left xl:flex xl:gap-0">
+                        className=" flex gap-4 justify-center flex-wrap md:flex-col md:gap-2 md:text-left xl:flex xl:gap-0">
                         {leftItems.map((item: LeftItems) => (
                             <Link
                                 key={item.text}
