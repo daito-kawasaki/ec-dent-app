@@ -11,6 +11,7 @@ module.exports = {
         extend: {
             spacing: {
                 7.5: '1.875rem', //30px
+                12.5: '3.25rem',
                 14.5: '3.75rem', //60px
                 50: '3.125rem', //50px
                 140: '8.75rem', //140px
@@ -21,15 +22,24 @@ module.exports = {
             fontSize: {
                 '3.5xl': '2.0625rem',
                 '2.5xl': '1.59375rem',
+                44: '2.75rem',
             },
             width: {
                 32.5: '8.5rem',
                 40.5: '10.625rem',
                 53: '13.75rem',
+                235: '14.6875rem',
                 250: '15.625rem',
+                280: '17.5rem',
                 340: '21.25rem',
                 520: '32.5rem',
                 390: '24.375rem',
+
+                secLine_sp: '18.5rem', //296px
+                secLine_sm: '28rem', //448px
+                secLine_md: '33rem', //528px
+                secLine_lg: '33rem', //528px
+                secLine_xl: '33.375rem', //534px
             },
         },
         screens: {

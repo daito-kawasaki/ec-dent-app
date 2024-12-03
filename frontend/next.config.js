@@ -1,6 +1,9 @@
-const withStyledComponents = require('styled-components-nextjs')
-
-module.exports = withStyledComponents({
+// next.config.js
+const nextConfig = {
     reactStrictMode: true,
-    // 他の設定
-})
+    compiler: {
+        styledComponents: true,
+    },
+}
+
+module.exports = nextConfig
