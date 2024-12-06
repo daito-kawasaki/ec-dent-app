@@ -7,6 +7,11 @@ module.exports = {
         files: ['./src/**/*.{js,jsx,ts,tsx}'],
         extract,
     },
+    safelist: [
+        { pattern: /^border-/ },
+        { pattern: /^bg-/ },
+        { pattern: /^text-/ },
+    ],
     theme: {
         screens,
         screens: {
