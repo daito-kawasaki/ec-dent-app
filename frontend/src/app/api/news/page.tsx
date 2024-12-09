@@ -1,7 +1,7 @@
 'use client'
 
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios'
 import { useEffect, useState } from 'react'
+import { fetchNews } from '@/lib/api/news/fetch-api'
 
 type NEWS = {
     news_id: number
@@ -12,32 +12,29 @@ type NEWS = {
     created_at: string
 }
 
-const url = 'http://localhost:80/api'
-const options: AxiosRequestConfig = {
-    url: `${url}/news`,
-    method: 'GET',
-}
-
 const AxiosGet: React.FC = () => {
     const [news, setNews] = useState<NEWS[]>([])
     const [error, setError] = useState<string | null>(null)
+    const [isLoaded, setIsLoaded] = useState<boolean>(false)
 
     useEffect(() => {
-        axios(options)
-            .then((response: AxiosResponse<{ news: NEWS[] }>) => {
-                setNews(response.data.news)
-            })
-            .catch((e: AxiosError) => {
-                setError(e.message)
-                console.error('API Error:', e)
-            })
+        async function fetchNewsData() {
+            const newsData = await fetchNews()
+            console.log('yo')
+            console.log(newsData)
+            setNews(newsData)
+            setIsLoaded(true)
+        }
+        fetchNewsData()
     }, [])
 
-    return (
-        <div>
-            {error && <p>エラー: {error}</p>}
-            {news.length === 0 && !error && <p>読み込み中...</p>}{' '}
-            {news.length > 0 && (
+    if (!isLoaded) {
+        return <div>読み込み中</div>
+    }
+
+    if (news)
+        return (
+            <div>
                 <ul>
                     {news.map(({ news_id, news_title, news_category_id }) => (
                         <li key={news_id}>
@@ -45,9 +42,8 @@ const AxiosGet: React.FC = () => {
                         </li>
                     ))}
                 </ul>
-            )}
-        </div>
-    )
+            </div>
+        )
 }
 
 export default AxiosGet
