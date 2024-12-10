@@ -5,7 +5,8 @@ import NewsList from '@/components/ui/NewsList'
 import { promises } from 'dns'
 
 async function getNewsItem() {
-    const response = await fetch('http://localhost:80/api/news', {
+    const apiUrl = `${process.env.NEXT_PUBLIC_API_URL}/api/news`
+    const response = await fetch(apiUrl, {
         cache: 'no-cache',
         credentials: 'include',
     })
