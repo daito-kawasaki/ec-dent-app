@@ -17,7 +17,7 @@ return [
 
     'paths' => ['*'],
 
-    'allowed_methods' => ['*'],
+    'allowed_methods' =>  ['POST', 'GET', 'PATCH', 'OPTIONS', 'DELETE', 'PUT'],
 
     'allowed_origins' => [env('FRONTEND_URL', 'http://localhost:3000')],
 
