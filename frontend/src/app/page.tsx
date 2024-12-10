@@ -1,7 +1,8 @@
 import TopPage from '@/components/page/top-page'
 import Header from '@/components/common/header'
-import NewsList from '@/components/ui/NewsList'
+
 import FetchNewsList from '@/lib/api/news/fetch-news-list'
+import NewsList from '@/components/ui/tmp'
 
 export default function first() {
     return (
@@ -9,6 +10,7 @@ export default function first() {
             <Header />
             <TopPage />
             <FetchNewsList />
+            <NewsList />
         </>
     )
 }
