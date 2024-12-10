@@ -1,5 +1,7 @@
 'use server'
 
+import { NewsItem } from '@/lib/types/newsItem'
+
 type NEWS = {
     news_id: number
     news_title: string
@@ -11,10 +13,10 @@ type NEWS = {
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL
 
-export async function fetchNews(): Promise<NEWS[]> {
+export async function fetchNews(): Promise<NewsItem[]> {
     try {
-        // console.log('hi')
-        const response = await fetch('http://172.26.144.1:5055/api/news')
+        console.log('hi')
+        const response = await fetch('http://localhost:80/api/news')
         if (!response.ok) {
             throw new Error('HTTP error, status = ' + response.status)
         }
