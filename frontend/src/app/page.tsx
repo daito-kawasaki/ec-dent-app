@@ -10,7 +10,6 @@ export default function first() {
             <Header />
             <TopPage />
             <FetchNewsList />
-            <NewsList />
         </>
     )
 }
