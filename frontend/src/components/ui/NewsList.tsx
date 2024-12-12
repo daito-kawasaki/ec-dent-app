@@ -1,7 +1,6 @@
 import { NewsItem } from '@/lib/types/newsItem'
 
 export default function NewsList({ newsAllItem }: { newsAllItem: NewsItem[] }) {
-    console.log(newsAllItem)
     return (
         <div>
             {newsAllItem.map((newsAllItem: NewsItem) => (
