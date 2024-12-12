@@ -41,6 +41,14 @@ module.exports = {
                 secLine_lg: '33rem', //528px
                 secLine_xl: '33.375rem', //534px
             },
+            width: {
+                32.5: '8.5rem',
+                38: '9.375rem',
+                40.5: '10.625rem',
+                53: '13.75rem',
+                520: '32.5rem',
+                390: '24.375rem',
+            },
         },
         screens: {
             sp: '22.5rem',
