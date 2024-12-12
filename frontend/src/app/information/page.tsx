@@ -1,32 +1,14 @@
-'use client'
+'use server'
 
-import Header from '@/components/common/header'
-import { fetchNews } from '@/lib/api/news/fetch-api'
-import FetchNewsList from '@/lib/api/news/fetch-news-list'
 import { NewsItem } from '@/lib/types/newsItem'
-import { useEffect, useState } from 'react'
+import NewsList from '@/components/ui/NewsList'
+import { getNewsItem } from '@/lib/api/news/fetch-api'
 
-export default function NewsListPage() {
-    const [newsData, setNewsData] = useState<NewsItem[]>([])
-    const [loaded, setLoaded] = useState<boolean>(false)
+export default async function NewsListPage() {
+    const newsAllItem: NewsItem[] = await getNewsItem()
+    if (!newsAllItem) {
+        return <p>loding</p>
+    }
 
-    useEffect(() => {
-        async function getNewsList() {
-            const data = await fetch('http://localhost:80/api/news')
-            const json = await data.json()
-            setNewsData(json)
-        }
-
-        getNewsList()
-    }, [])
-    if (!loaded) <p>読込中</p>
-
-    return (
-        <div>
-            {newsData.map((data, key) => (
-                <div key={key}>{data.news_title}</div>
-            ))}
-        </div>
-    )
-    // return <FetchNewsList />
+    return <NewsList newsAllItem={newsAllItem} />
 }
