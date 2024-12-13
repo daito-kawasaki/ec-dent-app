@@ -11,9 +11,12 @@ class ApiNewsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $news = News::all(); // カテゴリ情報を含めて取得
+        $perPage = $request->query('per_page', 10);
+        $news = News::with('category')->paginate($perPage);
+
+        // dd($news);
         return response()->json($news);
     }
 
