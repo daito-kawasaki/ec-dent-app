@@ -1,11 +1,13 @@
-'use client'
-
 import { dmSerifDisplay } from '@/lib/fonts'
 
 import Link from 'next/link'
 import MainVisualSlide from '../ui/sliders/main-visual-slide'
 import ProductSlide from '../ui/sliders/product-slide'
-import InformationList from '../ui/informations/information-list'
+
+import { NewsItem } from '@/lib/types/newsItem'
+
+import { getNewsItem } from '@/lib/api/news/fetch-api'
+import NewsList from '../ui/news/NewsList'
 
 interface PageLinkContext {
     src: string
@@ -19,7 +21,8 @@ function PageLink({ pageLinkContext }: { pageLinkContext: PageLinkContext }) {
     return <></>
 }
 
-export default function TopPage() {
+export default async function TopPage() {
+    const newsAllItem = await getNewsItem(3, 1)
     return (
         <main>
             <MainVisualSlide slideSize={{ width: 480, height: 480 }} />
@@ -49,7 +52,8 @@ export default function TopPage() {
                     }}
                 />
             </div>
-            <InformationList />
+
+            <NewsList newsAllItem={newsAllItem} />
         </main>
     )
 }
