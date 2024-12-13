@@ -18,22 +18,18 @@ class NewsSeeder extends Seeder
         News::create([
             'news_title' => Str::random(10),
             'news_detail'  => Str::random(10),
-            'news_category_id'  => 1,
+            'news_category_id'  => 3,
+        ]);
+
+        News::create([
+            'news_title' => Str::random(10),
+            'news_detail'  => Str::random(10),
+            'news_category_id'  => 2,
         ]);
         News::create([
             'news_title' => Str::random(10),
             'news_detail'  => Str::random(10),
-            'news_category_id'  => 1,
-        ]);
-        News::create([
-            'news_title' => Str::random(10),
-            'news_detail'  => Str::random(10),
-            'news_category_id'  => 1,
-        ]);
-        News::create([
-            'news_title' => Str::random(10),
-            'news_detail'  => Str::random(10),
-            'news_category_id'  => 1,
+            'news_category_id'  => 4,
         ]);
         News::create([
             'news_title' => Str::random(10),
