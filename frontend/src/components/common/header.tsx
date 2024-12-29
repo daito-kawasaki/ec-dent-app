@@ -229,34 +229,6 @@ export default function Header() {
                             }`}
                         />
                     </button>
-                    <button
-                        onClick={toggleMenu}
-                        type="button"
-                        className={`${isMenuOpen ? 'z-[51] border-white' : ''} relative w-14 h-14 flex flex-col ~/md:~gap-0.5/1.5 justify-center items-center border border-black rounded-[50%]  sm:~sm/lg:~w-10/12  sm:~sm/lg:~h-10/12  md:w-vw-20 md:h-vw-20
-                          `}>
-                        {/* 上の線 */}
-                        <span
-                            className={`w-7 h-[2px] scale-y-50 absolute sm:~sm/lg:~w-5/7 bg-black transition-transform duration-300 ${
-                                isMenuOpen
-                                    ? 'rotate-45 bg-white'
-                                    : '-translate-y-2.5 sm:~sm/lg:~-translate-y-2/2.5'
-                            }`}
-                        />
-                        {/* 中央の線 */}
-                        <span
-                            className={`w-7 h-[2px] scale-y-50 absolute sm:~sm/lg:~w-5/7 bg-black transition-opacity duration-300  ${
-                                isMenuOpen ? 'opacity-0' : ''
-                            }`}
-                        />
-                        {/* 下の線 */}
-                        <span
-                            className={`w-7 h-[2px] scale-y-50 absolute sm:~sm/lg:~w-5/7 bg-black transition-transform duration-300 ${
-                                isMenuOpen
-                                    ? '-rotate-45 bg-white ]'
-                                    : 'translate-y-2.5 sm:~sm/lg:~translate-y-2/2.5'
-                            }`}
-                        />
-                    </button>
                 </div>
             </nav>
 

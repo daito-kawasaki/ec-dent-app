@@ -1,7 +1,5 @@
 'use server'
 
-import { NewsItem } from '@/lib/types/newsItem'
-
 import { NewsItem, PaginatedNewsData } from '@/lib/types/newsItem'
 import NewsList from '@/components/ui/news/NewsList'
 
