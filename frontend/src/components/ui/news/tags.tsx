@@ -7,7 +7,7 @@ export default function InformationTag({ tag }: { tag: NewsItem }) {
 
     return (
         <div
-            className={`inline-block px-2 py-1 rounded text-sm font-medium bg-${colorClass} text-white`}>
+            className={` flex justify-center w-[75px] px-2 py-1 rounded text-sm font-medium bg-${colorClass} text-white`}>
             {tag.category.news_category_name}
         </div>
     )
