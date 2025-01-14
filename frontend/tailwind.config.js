@@ -7,6 +7,12 @@ module.exports = {
         files: ['./src/**/*.{js,jsx,ts,tsx}'],
         extract,
     },
+    safelist: [
+        { pattern: /bg-./ },
+        { pattern: /text-./ },
+        { pattern: /border-./ },
+    ],
+
     theme: {
         extend: {
             spacing: {
@@ -28,6 +34,7 @@ module.exports = {
                 32.5: '8.5rem',
                 40.5: '10.625rem',
                 53: '13.75rem',
+                190: '11.875rem',
                 235: '14.6875rem',
                 250: '15.625rem',
                 280: '17.5rem',
@@ -40,6 +47,9 @@ module.exports = {
                 secLine_md: '33rem', //528px
                 secLine_lg: '33rem', //528px
                 secLine_xl: '33.375rem', //534px
+            },
+            colors: {
+                pink: '#FF72B2', //メニューリストタグの色
             },
         },
         screens: {
@@ -79,6 +89,9 @@ module.exports = {
                 '.back-groud-image-web': {
                     backgroundImage:
                         'url(../../public/images/brand-page/back_img.png)',
+                },
+                '.page-setting': {
+                    listStyleType: 'none',
                 },
             })
         }),

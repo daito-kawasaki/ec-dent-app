@@ -19,7 +19,7 @@ export default function RootLayout({
     return (
         <html lang="ja">
             <body
-                className={`${notoSansJp.className} text-base back-groud-image-web`}>
+                className={`${notoSansJp.className} text-base back-groud-image-web page-setting`}>
                 {children}
             </body>
         </html>

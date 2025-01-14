@@ -11,18 +11,18 @@ export default function NewsContents({
     newsAllItem: NewsItem
 }) {
     return (
-        <Link
-            href={`/news/${newsAllItem.news_id}`}
-            className="border-b-2 grid px-2 pt-6 pb-2">
-            <div className="flex flex-row pb-2">
-                <div className="pr-2.5">
-                    <InformationTag tag={newsAllItem} />
+        <li className="px-[20px]">
+            <Link
+                href={`/news/${newsAllItem.news_id}`}
+                className="flex flex-col border-b-2 gap-[10px] ">
+                <div id="tag_items" className=" gap-[10px]">
+                    <div id="tag_span" className="flex">
+                        <InformationTag tag={newsAllItem} />
+                        <p className={``}>{newsAllItem.created_at}</p>
+                    </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-4 gap-4">
-                <p className={`col-span-1`}>{newsAllItem.created_at}</p>
-                <p className={`col-span-3`}>{newsAllItem.news_title}</p>
-            </div>
-        </Link>
+                <p className={``}>{newsAllItem.news_title}</p>
+            </Link>
+        </li>
     )
 }
